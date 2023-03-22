@@ -109,7 +109,7 @@ while (h)
 h = h->next;
 l++;
 }
-if (length < 2)
+if (l < 2)
 {
 fprintf(stderr, "L%d: can't div, stack too short\n", i);
 fclose(bus.file);
