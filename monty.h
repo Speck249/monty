@@ -55,6 +55,8 @@ char *content;
 int lifi;
 }  bus_t;
 
+size_t getline(char **string, size_t *n, FILE *stream);
+
 extern bus_t bus;
 
 char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
@@ -63,7 +65,7 @@ char  *clean_line(char *content);
 void monty_push(stack_t **head, unsigned int number);
 void monty_pall(stack_t **head, unsigned int number);
 void monty_pint(stack_t **head, unsigned int number);
-int exec_opcode(char *content, stack_t **head, unsigned int i, FILE *file);
+int exec_opcode(char *content, stack_t **head, unsigned int counter, FILE *file);
 void free_stack(stack_t *head);
 void monty_pop(stack_t **head, unsigned int i);
 void monty_swap(stack_t **head, unsigned int i);
@@ -73,8 +75,12 @@ void monty_sub(stack_t **head, unsigned int i);
 void monty_div(stack_t **head, unsigned int i);
 void monty_mul(stack_t **head, unsigned int i);
 void monty_mod(stack_t **head, unsigned int i);
+void monty_pchar(stack_t **head, unsigned int i);
+void monty_pstr(stack_t **head, unsigned int i);
+void monty_rotl(stack_t **head, unsigned int i);
+void monty_rotr(stack_t **head, __attribute__((unused)) unsigned int i);
 void add_node(stack_t **head, int n);
-void add_queue(stack_t **head, int n);
+void add_to_queue(stack_t **head, int n);
 void monty_queue(stack_t **head, unsigned int i);
 void monty_stack(stack_t **head, unsigned int i);
 #endif

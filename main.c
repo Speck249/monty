@@ -1,6 +1,6 @@
 #include "monty.h"
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
 #define _GNU_SOURCE
 
@@ -33,6 +33,7 @@ if (!file)
 fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 exit(EXIT_FAILURE);
 }
+
 while (read_line > 0)
 {
 content = NULL;

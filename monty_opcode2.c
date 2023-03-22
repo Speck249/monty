@@ -35,5 +35,5 @@ j = atoi(bus.arg);
 if (bus.lifi == 0)
 add_node(head, j);
 else
-add_queue(head, j);
+add_to_queue(head, j);
 }
