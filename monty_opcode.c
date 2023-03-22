@@ -5,7 +5,6 @@
 *@i: second parameter
 *Return: returns no value
 */
-
 void monty_add(stack_t **head, unsigned int i)
 {
 stack_t *h;
